@@ -1,0 +1,151 @@
+/*CSS for Program*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 2%;
+    font-size: 2rem;
+
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    background-color: #849BA5;
+}
+nav a {
+    text-align: center;
+    text-decoration: none;
+    flex-direction: row;
+    width: 100%;
+    padding: 1%;
+    margin: 2.5%;
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+nav a:hover {
+
+    background-color: white;
+
+    border-radius: 1%;
+}
+
+main {
+    display: grid;
+    grid-template: 1fr / 2fr 1fr;
+    gap: 1%;
+    max-width: 100%;
+    padding: 1%;
+    margin: 1%;
+}
+
+header {
+    background-color: #6C8B98;
+    background-color: #6C8B98;
+}
+
+
+#about-me {
+    padding-left: 30px;
+    ;
+}
+
+
+
+img {
+    height: 300px;
+    width: 300px;
+    border-radius: 5%;
+}
+#spokane{
+    width: 800px;
+    height: 600px;
+    justify-content: center;
+}
+
+.card {
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+.cardheader {
+    text-align: center;
+    grid-column: 1/4;
+    background-color: #849BA5;
+    padding: 5%;
+}
+
+/*This is the CSS for the about me section*/
+
+.about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 40px;
+    align-items: center;
+    background-color: #849BA5;
+    padding: 5%;
+}
+
+#aboutme {
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    margin: 2%;
+    
+}
+#about-spokane{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 3%;
+
+}
+.description {
+    padding: 2%;
+    margin: 2%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+#spokane { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#location_spokane{
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 40px;
+    align-items: center;
+}
+
+
+
+footer {
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #6C8B98;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-decoration: underline;
+
+}
