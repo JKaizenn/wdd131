@@ -64,15 +64,14 @@ img {
     border-radius: 5%;
 }
 #spokane{
-    width: 800px;
-    height: 600px;
+    width: auto;
+    height: auto;
     justify-content: center;
 }
 #flag{
-    display:grid;
-    place-items: center;
+    justify-content: center;
+    height: auto;
     width: auto;
-    margin-left: 200px;
 }
 
 .card {
