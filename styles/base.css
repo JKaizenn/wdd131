@@ -68,6 +68,12 @@ img {
     height: 600px;
     justify-content: center;
 }
+#flag{
+    display:grid;
+    place-items: center;
+    width: auto;
+    margin-left: 200px;
+}
 
 .card {
     border: 2px solid black;
