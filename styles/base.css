@@ -162,3 +162,13 @@ footer {
   border-radius: 10px;
   text-decoration: underline;
 }
+
+@media (max-width: 730px) {
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    flex: 1 1 100%;
+  }
+}
