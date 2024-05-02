@@ -58,21 +58,16 @@ header {
 }
 
 img {
-  height: 300px;
+  height: auto;
   width: 300px;
   border-radius: 5%;
 }
-#spokane {
-  grid-column: 3 / 4;
-  margin: auto;
-  height: 200px;
-  width: 220px;
-}
+
 #flag {
   grid-column: 1/2;
   grid-row: 3/4;
   width: 220px;
-  height: 130px;
+  height: auto;
   margin-left: 20px;
 }
 
