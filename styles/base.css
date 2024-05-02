@@ -1,156 +1,166 @@
 /*CSS for Program*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 h1 {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding: 2%;
-    font-size: 2rem;
-
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 2%;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 nav {
-    display: flex;
-    background-color: #849BA5;
+  display: flex;
+  background-color: #849ba5;
 }
 nav a {
-    text-align: center;
-    text-decoration: none;
-    flex-direction: row;
-    width: 100%;
-    padding: 1%;
-    margin: 2.5%;
-    color: black;
-    font-size: 1.5rem;
-    text-decoration: underline;
+  text-align: center;
+  text-decoration: none;
+  flex-direction: row;
+  width: 100%;
+  padding: 1%;
+  margin: 2.5%;
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 nav a:hover {
+  background-color: white;
 
-    background-color: white;
-
-    border-radius: 1%;
+  border-radius: 1%;
 }
 
 main {
-    display: grid;
-    grid-template: 1fr / 2fr 1fr;
-    gap: 1%;
-    max-width: 100%;
-    padding: 1%;
-    margin: 1%;
+  display: grid;
+  grid-template: 1fr / 2fr 1fr;
+  gap: 1%;
+  max-width: 100%;
+  padding: 1%;
+  margin: 1%;
 }
 
 header {
-    background-color: #6C8B98;
-    background-color: #6C8B98;
+  background-color: #6c8b98;
+  background-color: #6c8b98;
 }
-
 
 #about-me {
-    padding-left: 30px;
-    ;
+  padding-left: 30px;
 }
-
-
 
 img {
-    height: 300px;
-    width: 300px;
-    border-radius: 5%;
+  height: 300px;
+  width: 300px;
+  border-radius: 5%;
 }
-#spokane{
-    width: fit-content;
-    height: fit-content;
-    justify-content: center;
+#spokane {
+  grid-column: 3 / 4;
+  margin: auto;
+  height: 200px;
+  width: 220px;
 }
-#flag{
-    justify-content: center;
-    height:fit-content;
-    width:fit-content
+#flag {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  width: 220px;
+  height: 130px;
+  margin-left: 20px;
 }
 
 .card {
-    border: 2px solid black;
-    border-radius: 10px;
-
+  margin: 1rem 0;
+  border: 1px solid #415541;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px black;
 }
 
 .cardheader {
-    text-align: center;
-    grid-column: 1/4;
-    background-color: #849BA5;
-    padding: 5%;
+  text-align: center;
+  grid-column: 1/4;
+  background-color: #849ba5;
+  padding: 5%;
+}
+.card h2 {
+  border: 1px;
+  background-color: #6c8b98;
+  font-size: 2rem;
+  padding: 0.75rem 0;
+  color: #fff;
+  display: block;
+  text-align: center;
 }
 
 /*This is the CSS for the about me section*/
 
-.about-me{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 40px;
-    align-items: center;
-    background-color: #849BA5;
-    padding: 5%;
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40px;
+  align-items: center;
+  background-color: #849ba5;
+  padding: 5%;
 }
 
 #aboutme {
-    grid-column: 1/4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2%;
-    margin: 2%;
-    
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin: 2%;
 }
-#about-spokane{
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 3%;
-
+#about-spokane {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 3%;
+grid-column: 2/4;
+grid-row: 3/4;
+  
 }
 .description {
-    padding: 2%;
-    margin: 2%;
-    font-size: 1.5rem;
-    text-align: center;
+  padding: 2%;
+  margin: 2%;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-
-#spokane { 
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+#spokane {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#location_spokane{
-    justify-content: center;
-    text-align: center;
-    text-decoration: underline;
+#location_spokane {
+  justify-content: center;
+  text-align: center;
+  text-decoration: underline;
 }
 
 #resources {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 40px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40px;
+  align-items: center;
 }
 
-
-
 footer {
-    font-size: 1.2rem;
-    text-align: center;
-    background-color: #6C8B98;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-decoration: underline;
-
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #6c8b98;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-decoration: underline;
 }
