@@ -1,19 +1,33 @@
 // temples.js
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the current year and update the footer
-  var currentYear = new Date().getFullYear();
-  document.getElementById("copyright").textContent = currentYear;
+  var hamburgerBtn = document.getElementById("hamburger");
+  var navMenu = document.getElementById("navMenu");
 
-  // Get the last modified date of the document and update the footer
-  var lastModified = document.lastModified;
-  document.getElementById("lastModified").textContent = lastModified;
+  if (!hamburgerBtn || !navMenu) {
+    console.error("Hamburger button or navigation menu not found.");
+    return;
+  }
 
-  // Toggle navigation menu on mobile view
-  var hamburger = document.querySelector(".hamburger");
-  var nav = document.querySelector("nav");
+  // Function to toggle the navigation menu
+  function toggleMenu() {
+    navMenu.classList.toggle("show");
+    var isOpen = navMenu.classList.contains("show");
+    hamburgerBtn.textContent = isOpen ? "✕" : "☰";
+  }
 
-  hamburger.addEventListener("click", function () {
-    nav.classList.toggle("show");
+  // Event listener for hamburger button click
+  hamburgerBtn.addEventListener("click", function () {
+    toggleMenu();
+  });
+
+  // Close the menu when a menu item is clicked (optional)
+  var menuItems = document.querySelectorAll("#navMenu ul li a");
+  menuItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      if (navMenu.classList.contains("show")) {
+        toggleMenu();
+      }
+    });
   });
 });

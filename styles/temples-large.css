@@ -1,35 +1,19 @@
 /* temples-large.css */
 
-/* Styles for larger screens */
 header {
     padding: 20px 40px;
-    /* Increase padding for larger header */
 }
 
 nav ul li {
     display: inline-block;
-    /* Change display to inline-block for horizontal menu */
     margin-right: 40px;
-    /* Increase margin between menu items */
 }
 
 main {
     max-width: 800px;
-    /* Limit width of main content */
     margin: 0 auto;
-    /* Center main content horizontally */
 }
 
 .temple-images {
-    display: grid;
-    /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Responsive grid layout */
-    gap: 20px;
-    /* Add gap between grid items */
-}
-
-footer {
-    padding: 20px 0;
-    /* Increase padding for larger footer */
+    grid-gap: 30px;
 }

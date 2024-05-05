@@ -6,36 +6,73 @@
     <meta name="author" content="Jessen Forbush">
     <meta name="description" content="WDD 131 - Temple Photo Album">
     <title>Temples</title>
-    <link rel="stylesheet" href="temples.css">
-    <link rel="stylesheet" href="temples-large.css" media="screen and (min-width: 768px)">
-    <script defer src="temples.js"></script>
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
+    <script defer src="scripts/temples.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Temples</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>Temples</h1>
+    <button id="hamburger">☰
+        <span class="sr-only">Menu</span>
+    </button>
+    <nav id="navMenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Old</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Large</a></li>
+            <li><a href="#">Small</a></li>
+        </ul>
+    </nav>
+</header>
     <main>
         <h2>Temple Selection</h2>
         <section class="temple-images">
-            <!-- Add your figure elements with temple images and captions here -->
-            <figure>
-                <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Meridian Temple">
-                <figcaption>Temple Name</figcaption>
-            </figure>
-            <!-- Add more figure elements as needed -->
-        </section>
+        <figure>
+            <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Temple 1">
+            <figcaption>Meridian Idaho</figcaption>
+        </figure>
+        <figure>
+            <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Temple 2">
+            <figcaption>Meridian Idaho</figcaption>
+        </figure>
+        <figure>
+            <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Temple 3">
+            <figcaption>Meridian Idaho</figcaption>
+        </figure>
+        <figure>
+            <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Temple 4">
+            <figcaption>Meridian Idaho</figcaption>
+        </figure>
+        <figure>
+            <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Temple 5">
+            <figcaption>Meridian Idaho</figcaption>
+        </figure>
+        <figure>
+            <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Temple 6">
+            <figcaption>Meridian Idaho</figcaption>
+        </figure>
+        <figure>
+            <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Temple 7">
+            <figcaption>Meridian Idaho</figcaption>
+        </figure>
+        <figure>
+            <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Temple 8">
+            <figcaption>Meridian Idaho</figcaption>
+        </figure>
+        <figure>
+            <img src="images/meridian-idaho-temple-3302-main.jpg" alt="Temple 9">
+            <figcaption>Meridian Idaho</figcaption>
+        </figure>
+    </section>
     </main>
-    <footer>
-        <p>&copy; <span id="copyright"></span> | Last Modified: <span id="lastModified"></span></p>
-    </footer>
+   <footer>
+    <p>&copy; <span id="copyright"></span> Jessen Forbush | Last Modified: <span id="lastModified"></span></p>
+</footer>
+
 </body>
 </html>
