@@ -66,3 +66,35 @@ footer {
 .temple-images img {
     max-width: 100%;
 }
+
+/* Hamburger button and mobile view styles */
+#hamburger {
+    display: none;
+    /* Hide the hamburger button by default */
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        display: none;
+        /* Hide the navigation menu by default */
+    }
+
+    #hamburger {
+        display: block;
+        /* Show the hamburger button */
+    }
+
+    #navMenu.show {
+        display: flex;
+        /* Show the navigation menu when the show class is applied */
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
