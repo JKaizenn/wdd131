@@ -1,5 +1,17 @@
 // temples.js
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Update copyright year
+    var currentYear = new Date().getFullYear();
+    var copyrightElement = document.getElementById("copyright");
+    copyrightElement.textContent = currentYear;
+
+    // Update last modified date
+    var lastModifiedDate = new Date(document.lastModified);
+    var lastModifiedElement = document.getElementById("lastModified");
+    lastModifiedElement.textContent = lastModifiedDate.toDateString();
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   var hamburgerBtn = document.getElementById("hamburger");
   var navMenu = document.getElementById("navMenu");
