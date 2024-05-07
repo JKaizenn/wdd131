@@ -1,72 +1,48 @@
-/*CSS for Places.html*/
-
-body{
+/* Default styles for both portrait and landscape */
+body {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
-
-header{
-    background-color:#687195;
-        /* Background color for the header */
-        color: #fff;
-        /* Text color for the header */
-        padding: 5%;
-        /* Add padding for spacing */
-        margin: 0;
-        /* Remove default margin */
-        width: 100%;
-
-        box-sizing: border-box;
-
-
-}
-header h1{
+header {
+    background-color: #687195;
+    color: #fff;
+    padding: 5%;
     margin: 0;
-    font-size: 5vw;
-
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.image-1{
+header h1 {
+    margin: 0;
+    font-size: 10px;
+}
+
+.image-1 {
     justify-content: center;
     width: 800px;
     height: auto;
 }
 
-
-
-.weather{
+.weather {
     display: block;
     margin-bottom: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-/* CSS for screen sizes */
-
-/* For screens smaller than 600px (portrait mode) */
-@media (max-width: 600px) {
-    .media {
-        /* Adjust width and height for portrait display */
-        width: 100%;
-        height: auto;
+/* Styles for portrait orientation */
+@media (orientation: portrait) {
+    body {
+        font-size: 4vw;
+        /* Adjust font size for portrait */
     }
 }
 
-/* For screens larger than 600px (landscape mode) */
-@media (min-width: 601px) {
-    .media {
-        /* Adjust width and height for landscape display */
-        width: auto;
-        height: 100%;
+/* Styles for landscape orientation */
+@media (orientation: landscape) {
+    body{
+        font-size: 6vw;
+        /* Adjust font size for landscape */
     }
 }
