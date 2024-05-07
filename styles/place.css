@@ -1,0 +1,40 @@
+/*CSS for Places.html*/
+
+body{
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+
+header{
+    background-color:#687195;
+
+
+}
+
+
+
+
+
+
+
+
+/* CSS for screen sizes */
+
+/* For screens smaller than 600px (portrait mode) */
+@media (max-width: 600px) {
+    .media {
+        /* Adjust width and height for portrait display */
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For screens larger than 600px (landscape mode) */
+@media (min-width: 601px) {
+    .media {
+        /* Adjust width and height for landscape display */
+        width: auto;
+        height: 100%;
+    }
+}
