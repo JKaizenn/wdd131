@@ -3,14 +3,46 @@
 body{
     font-family: "Oswald", sans-serif;
     font-weight: 400;
+    margin-left: auto;
+    margin-right: auto
 }
 
 
 header{
     background-color:#687195;
+        /* Background color for the header */
+        color: #fff;
+        /* Text color for the header */
+        padding: 5%;
+        /* Add padding for spacing */
+        margin: 0;
+        /* Remove default margin */
+        width: 100%;
+
+        box-sizing: border-box;
 
 
 }
+header h1{
+    margin: 0;
+    font-size: 5vw;
+
+}
+
+.image-1{
+    justify-content: center;
+    width: 800px;
+    height: auto;
+}
+
+
+
+.weather{
+    display: block;
+    margin-bottom: 10px;
+}
+
+
 
 
 
