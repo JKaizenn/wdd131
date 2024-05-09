@@ -1,0 +1,48 @@
+/* Default styles for both portrait and landscape */
+body {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #687195;
+    color: #fff;
+    padding: 5%;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 10px;
+}
+
+.image-1 {
+    justify-content: center;
+    width: 800px;
+    height: auto;
+}
+
+.weather {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styles for portrait orientation */
+@media (orientation: portrait) {
+    body {
+        font-size: 4vw;
+        /* Adjust font size for portrait */
+    }
+}
+
+/* Styles for landscape orientation */
+@media (orientation: landscape) {
+    body{
+        font-size: 6vw;
+        /* Adjust font size for landscape */
+    }
+}
