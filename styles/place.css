@@ -17,7 +17,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 10px;
+    font-size: 50px;
 }
 
 .image-1 {
@@ -31,6 +31,7 @@ header h1 {
     margin-bottom: 10px;
 }
 
+
 /* Styles for portrait orientation */
 @media (orientation: portrait) {
     body {
@@ -39,10 +40,3 @@ header h1 {
     }
 }
 
-/* Styles for landscape orientation */
-@media (orientation: landscape) {
-    body{
-        font-size: 6vw;
-        /* Adjust font size for landscape */
-    }
-}

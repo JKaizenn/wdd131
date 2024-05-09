@@ -27,7 +27,7 @@ function calculateWindChill(temperature, windSpeed) {
 }
 
 // Example usage
-let temperature = 5; // Example temperature in Celsius
+let temperature = 10; // Example temperature in Celsius
 let windSpeed = 10; // Example wind speed in km/h
 let temperatureUnit = 'C'; // Example temperature unit
 let windSpeedUnit = 'km/h'; // Example wind speed unit
