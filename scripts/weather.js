@@ -1,36 +1,48 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the current year and update the footer
-var currentYear = new Date().getFullYear();
-document.getElementById("copyright").textContent = currentYear;
-  // Get the last modified date of the document and update the footer
-var lastModified = document.lastModified;
-document.getElementById("lastModified").textContent = lastModified;
+// Example temperature value in Celsius
+const tempCelsius = 10;
+const windKmph = 5; // Example wind speed value in km/h
 
-});
+// Convert Celsius to Fahrenheit
+const celsiusToFahrenheit = (celsius) => (9 / 5) * celsius + 32;
 
-// Function to calculate windchill factor
-function calculateWindChill(temperature, windSpeed) {
-    // Check if conditions are met for viable wind chill calculations
-    if ((temperature <= 10 && temperatureUnit === 'C') || (temperature <= 50 && temperatureUnit === 'F')) {
-        if ((windSpeed > 4.8 && windSpeedUnit === 'km/h') || (windSpeed > 3 && windSpeedUnit === 'mph')) {
-            // Calculate windchill factor
-            let windChill;
-            if (temperatureUnit === 'C') {
-                windChill = 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);
-            } else {
-                windChill = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
-            }
-            return windChill.toFixed(1); // Return windchill factor rounded to one decimal place
-        }
-    }
-    return "N/A"; // Return "N/A" if conditions are not met
+// Convert km/h to mph
+const kmphToMph = (kmph) => kmph / 1.609344;
+
+// Calculate Wind Chill in Fahrenheit
+const calculateWindChill = (tFahrenheit, wMph) => {
+  return (
+    35.74 +
+    0.6215 * tFahrenheit -
+    35.75 * Math.pow(wMph, 0.16) +
+    0.4275 * tFahrenheit * Math.pow(wMph, 0.16)
+  );
+};
+
+// Get the DOM elements
+const temperatureElement = document.querySelector("#temperature");
+const windSpeedElement = document.querySelector("#wind");
+const windChillElement = document.querySelector("#chill");
+
+// Convert values to desired units
+const tempFahrenheit = celsiusToFahrenheit(tempCelsius).toFixed(1);
+const windMph = kmphToMph(windKmph).toFixed(1);
+
+// Display the temperature and wind speed
+temperatureElement.innerHTML = `${tempFahrenheit} °F`;
+windSpeedElement.innerHTML = `${windMph} mph`;
+
+// Calculate and display the wind chill
+if (tempFahrenheit <= 50 && windMph > 3) {
+  const windChillFahrenheit = calculateWindChill(
+    tempFahrenheit,
+    windMph
+  ).toFixed(1);
+  windChillElement.innerHTML = `${windChillFahrenheit} °F`;
+} else {
+  windChillElement.innerHTML = "N/A";
 }
 
-// Example usage
-let temperature = 10; // Example temperature in Celsius
-let windSpeed = 10; // Example wind speed in km/h
-let temperatureUnit = 'C'; // Example temperature unit
-let windSpeedUnit = 'km/h'; // Example wind speed unit
-
-let windChillFactor = calculateWindChill(temperature, windSpeed);
-console.log("Windchill Factor: " + windChillFactor);
+// Debugging
+console.log("Temperature in Fahrenheit:", tempFahrenheit);
+console.log("Wind Speed in mph:", windMph);
+console.log("Wind Chill:", windChillElement.innerHTML);

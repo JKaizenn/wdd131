@@ -1,87 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Country Page">
-    <meta name="author" content="Jessen Forbush">
-    <title>The United States of America</title>
-    <link rel="stylesheet" href="styles/place.css">
-    <script defer src="scripts/weather.js"></script>
+    <title>The United States of America - Rexburg, Idaho</title>
+    <meta name="description" content="Country Page for Rexburg, Idaho, United States of America"/>
+    <meta name="author" content="Jessen Forbush"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>Rexburg, Idaho, United States Of America</h1>
     </header>
-<main>
+    <main>
+        <div class="container">
+            <div class="hero">
+                <picture>
+                    <source media="(min-width: 700px)" srcset="images/rexburg-temple.jpg">
+                    <img src="images/rexburg-temple.jpg" alt="Picture of Rexburg">
+                </picture>
+            </div>
+            <div class="data">
+                <h2>Data</h2>
+                <div class="label">
+                    <p>Area:</p>
+                    <p>Population:</p>
+                    <p>Capital:</p>
+                    <p>Languages:</p>
+                    <p>Currency:</p>
+                    <p>Time Zone:</p>
+                    <p>Calling Code:</p>
+                    <p>Internet TLD:</p>
+                </div>
+                <div class="text">
+                    <p id="area">9.85 sq mi (25.51 km²)</p>
+                    <p id="population">29,332 (2023)</p>
+                    <p id="capital">Boise, Idaho (State Capital)</p>
+                    <p id="languages">English</p>
+                    <p id="currency">United States Dollar (USD)</p>
+                    <p id="time-zone">Mountain Time Zone (UTC-7)</p>
+                    <p id="call-code">+1</p>
+                    <p id="tld">.us</p>
+                </div>
+            </div>
 
-<section class="image-1">
-<img src="images/rexburg-image.jpg" alt="picture of spokane">
-</section>
-<section class="data">
-<h1 id="Data">Data</h1>
-<div class="area">
-    <span>Area:</span>
-    <span id="area"></span></div>
-
-    <div class="population">
-    <span>Population:</span>
-    <span id="population"></span></div>
-
-    <div class="capital">
-    <span>Capital:</span>
-    <span id="area"></span></div>
-    
-    <div class="languages">
-    <span>Languages:</span>
-    <span id="languages"></span></div>
-    
-    <div class="currency">
-    <span>Currency:</span>
-    <span id="currency"></span></div>
-
-    <div class="time-zone">
-    <span>Time Zone:</span>
-    <span id="time-zone"></span></div>
-
-    <div class="call-code">
-    <span>Calling Code:</span>
-    <span id="call-code"></span></div>
-
-    <div class="tld">
-    <span>Internet TLD:</span>
-    <span id="tld"></span></div>
-
-    <div class="calling-code">
-    <span>Calling Code:</span>
-    <span id="calling-code"></span></div>
-</section>
-
-<section class="weather">
-    <h1>Weather</h1>
-
-    <div class="temperature">
-    <span>Temperature:</span>
-    <span id="temperature"></span></div>
-
-    <div class="conditions">
-    <span>Conditions:</span>
-    <span id="conditions"></span></div>
-
-    <div class="wind">
-    <span>Wind:</span>
-    <span id="wind"></span></div>
-
-    <div class="wind-chill">
-    <span>Wind Chill:</span>
-    <span id="wind-chill"></span></div>
-</section>
-</main>
+            <div class="weather">
+                <h2 id="weather-title">Weather</h2>
+                <picture>
+                    <img src="images/Weather_Icon.png" alt="Weather Icon" width="100">
+                </picture>
+                <div class="label">
+                    <p>Temperature:</p>
+                    <p>Conditions:</p>
+                    <p>Wind:</p>
+                    <p>Wind Chill:</p>
+                </div>
+                <div class="text">
+                    <p id="temperature"></p>
+                    <p id="conditions"></p>
+                    <p id="wind"></p>
+                    <p id="chill"></p>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer>
-        <p>&copy; <span id="copyright"></span> Jessen Forbush | Last Modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentyear"></span> Jessen Forbush | Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
+
 </html>

@@ -1,7 +1,0 @@
-/* Styles for landscape orientation */
-@media (orientation: landscape) {
-    body {
-        font-size: 6vw;
-        /* Adjust font size for landscape */
-    }
-}
