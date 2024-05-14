@@ -23,26 +23,35 @@ const temperatureElement = document.querySelector("#temperature");
 const windSpeedElement = document.querySelector("#wind");
 const windChillElement = document.querySelector("#chill");
 
-// Convert values to desired units
-const tempFahrenheit = celsiusToFahrenheit(tempCelsius).toFixed(1);
-const windMph = kmphToMph(windKmph).toFixed(1);
+// Check if elements are found
+if (temperatureElement && windSpeedElement && windChillElement) {
+  // Convert values to desired units
+  const tempFahrenheit = celsiusToFahrenheit(tempCelsius).toFixed(1);
+  const windMph = kmphToMph(windKmph).toFixed(1);
 
-// Display the temperature and wind speed
-temperatureElement.innerHTML = `${tempFahrenheit} °F`;
-windSpeedElement.innerHTML = `${windMph} mph`;
+  // Display the temperature and wind speed
+  temperatureElement.innerHTML = `${tempFahrenheit} °F`;
+  windSpeedElement.innerHTML = `${windMph} mph`;
 
-// Calculate and display the wind chill
-if (tempFahrenheit <= 50 && windMph > 3) {
-  const windChillFahrenheit = calculateWindChill(
-    tempFahrenheit,
-    windMph
-  ).toFixed(1);
-  windChillElement.innerHTML = `${windChillFahrenheit} °F`;
+  // Calculate and display the wind chill
+  if (tempFahrenheit <= 50 && windMph > 3) {
+    const windChillFahrenheit = calculateWindChill(
+      tempFahrenheit,
+      windMph
+    ).toFixed(1);
+    windChillElement.innerHTML = `${windChillFahrenheit} °F`;
+  } else {
+    windChillElement.innerHTML = "N/A";
+  }
+
+  // Debugging
+  console.log("Temperature in Fahrenheit:", tempFahrenheit);
+  console.log("Wind Speed in mph:", windMph);
+  console.log("Wind Chill:", windChillElement.innerHTML);
 } else {
-  windChillElement.innerHTML = "N/A";
+  console.error("One or more elements not found:", {
+    temperatureElement,
+    windSpeedElement,
+    windChillElement,
+  });
 }
-
-// Debugging
-console.log("Temperature in Fahrenheit:", tempFahrenheit);
-console.log("Wind Speed in mph:", windMph);
-console.log("Wind Chill:", windChillElement.innerHTML);
