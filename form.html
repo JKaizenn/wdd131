@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Product Review</h2>
+        </header>
+        <form id="reviewForm" method="get" action="review.html">
+            <label for="productName">Product Name:</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Choose a Product ...</option>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+
+            <label for="rating">Overall Rating:</label>
+            <div id="rating" class="rating">
+                <input type="radio" id="star5" name="rating" value="5" required><label for="star5">☆</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">☆</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">☆</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">☆</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">☆</label>
+            </div>
+
+            <label for="installationDate">Date of Installation:</label>
+            <input type="date" id="installationDate" name="installationDate" required>
+
+            <label>Which features did you find useful in the product? (Check all that apply)</label>
+            <div>
+                <input type="checkbox" id="durability" name="features" value="Durability"><label for="durability">Durability</label>
+                <input type="checkbox" id="easeOfUse" name="features" value="Ease of Use"><label for="easeOfUse">Ease of Use</label>
+                <input type="checkbox" id="performance" name="features" value="Performance"><label for="performance">Performance</label>
+                <input type="checkbox" id="design" name="features" value="Design"><label for="design">Design</label>
+            </div>
+
+            <label for="review">Written Review (Optional):</label>
+            <textarea id="review" name="review"></textarea>
+
+            <label for="yourName">Your Name (Optional):</label>
+            <input type="text" id="yourName" name="yourName">
+
+            <input type="submit" value="Post Review">
+        </form>
+        <footer>
+            <p>©2024 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>

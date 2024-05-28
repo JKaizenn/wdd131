@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Review Submitted</h2>
+        </header>
+        <div class="confirmation">
+            <p>Your review has been submitted successfully!</p>
+            <p>Total Reviews Submitted: <span id="reviewCount"></span></p>
+            <a href="form.html" class="btn">Submit Another Review</a>
+        </div>
+        <section class="past-reviews">
+            <h3>Past Reviews</h3>
+            <div id="reviewsList"></div>
+        </section>
+        <footer>
+            <p>©2024 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        // Display review count from localStorage
+        document.getElementById('reviewCount').textContent = localStorage.getItem('reviewCount') || 0;
+
+        // Retrieve and display past reviews from localStorage
+        const reviewsList = document.getElementById('reviewsList');
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+        if (reviews.length > 0) {
+            reviews.forEach(review => {
+                const reviewItem = document.createElement('div');
+                reviewItem.classList.add('review-item');
+                reviewItem.innerHTML = `
+                    <p><strong>Product:</strong> ${review.productName}</p>
+                    <p><strong>Rating:</strong> ${'☆'.repeat(review.rating)}</p>
+                    <p><strong>Installation Date:</strong> ${review.installationDate}</p>
+                    <p><strong>Useful Features:</strong> ${review.features.join(', ')}</p>
+                    <p><strong>Review:</strong> ${review.writtenReview}</p>
+                    <p><strong>Name:</strong> ${review.userName}</p>
+                `;
+                reviewsList.appendChild(reviewItem);
+            });
+        } else {
+            reviewsList.innerHTML = '<p>No past reviews found.</p>';
+        }
+    </script>
+</body>
+</html>
