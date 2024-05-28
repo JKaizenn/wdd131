@@ -1,3 +1,5 @@
+// scripts/script.js
+
 // Product array
 const products = [
   {
